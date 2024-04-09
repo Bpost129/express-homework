@@ -1,4 +1,5 @@
 import express from 'express'
+import { footballTeams } from './data/football-teams'
 
 const app = express()
 
