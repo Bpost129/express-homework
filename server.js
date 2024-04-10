@@ -1,5 +1,5 @@
 import express from 'express'
-import { footballTeams } from './data/football-teams'
+import { footballTeams } from './data/football-teams.js'
 
 const app = express()
 
@@ -13,6 +13,24 @@ app.get('/home', function(req, res) {
   res.render('home')
 })
 
+app.get('/teams', function(req, res) {
+  res.render('teams/index', {
+    footballTeams: footballTeams
+  })
+})
+
+app.get('/teams/afc', function(req, res) {
+  res.render('teams/afc', {
+    footballTeams: footballTeams
+  })
+})
+
+app.get('/teams/nfc', function(req, res) {
+  res.render('teams/nfc', {
+    footballTeams: footballTeams
+  })
+})
+
 app.listen(3000, function() {
-  console.log('Listening on port 300')
+  console.log('Listening on port 3000')
 })

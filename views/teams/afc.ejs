@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AFC Teams</title>
+</head>
+<body>
+  <h1 style="color: red;">AFC Teams</h1>
+  <h2>EAST</h2>
+  <ul>
+    <% footballTeams.forEach(team => { %>
+      <% if (team.conference === 'AFC' && team.division === 'EAST') { %>
+        <li>
+          <%= team.city %>
+        </li>
+      <% } %>
+    <% }) %>
+  </ul>
+  <h2>WEST</h2>
+  <ul>
+    <% footballTeams.forEach(team => { %>
+      <% if (team.conference === 'AFC' && team.division === 'WEST') { %>
+        <li>
+          <%= team.city %>
+        </li>
+      <% } %>
+    <% }) %>
+  </ul>
+  <h2>NORTH</h2>
+  <ul>
+    <% footballTeams.forEach(team => { %>
+      <% if (team.conference === 'AFC' && team.division === 'NORTH') { %>
+        <li>
+          <%= team.city %>
+        </li>
+      <% } %>
+    <% }) %>
+  </ul>
+  <h2>SOUTH</h2>
+  <ul>
+    <% footballTeams.forEach(team => { %>
+      <% if (team.conference === 'AFC' && team.division === 'SOUTH') { %>
+        <li>
+          <%= team.city %>
+        </li>
+      <% } %>
+    <% }) %>
+  </ul>
+</body>
+</html>

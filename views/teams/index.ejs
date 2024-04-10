@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teams</title>
+</head>
+<body>
+  <h1 style="display: flex; justify-content: center; color: green;">Football Teams </h1>
+  <h3 style="display: flex; justify-content: center;">by Division</h3>
+  <div class="conferences" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;">
+    <div class="afc">
+      <h2>AFC EAST</h2>
+      <ul>
+        <% footballTeams.forEach(team => { %>
+          <% if (team.conference === 'AFC' && team.division === 'EAST') { %>
+            <li>
+              <%= team.city %>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+      <h2>AFC WEST</h2>
+      <ul>
+        <% footballTeams.forEach(team => { %>
+          <% if (team.conference === 'AFC' && team.division === 'WEST') { %>
+            <li>
+              <%= team.city %>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+      <h2>AFC NORTH</h2>
+      <ul>
+        <% footballTeams.forEach(team => { %>
+          <% if (team.conference === 'AFC' && team.division === 'NORTH') { %>
+            <li>
+              <%= team.city %>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+      <h2>AFC SOUTH</h2>
+      <ul>
+        <% footballTeams.forEach(team => { %>
+          <% if (team.conference === 'AFC' && team.division === 'SOUTH') { %>
+            <li>
+              <%= team.city %>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+    </div>
+    <div class="nfc">
+      <h2>NFC EAST</h2>
+      <ul>
+        <% footballTeams.forEach(team => { %>
+          <% if (team.conference === 'NFC' && team.division === 'EAST') { %>
+            <li>
+              <%= team.city %>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+      <h2>NFC WEST</h2>
+      <ul>
+        <% footballTeams.forEach(team => { %>
+          <% if (team.conference === 'NFC' && team.division === 'WEST') { %>
+            <li>
+              <%= team.city %>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+      <h2>NFC NORTH</h2>
+      <ul>
+        <% footballTeams.forEach(team => { %>
+          <% if (team.conference === 'NFC' && team.division === 'NORTH') { %>
+            <li>
+              <%= team.city %>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+      <h2>NFC SOUTH</h2>
+      <ul>
+        <% footballTeams.forEach(team => { %>
+          <% if (team.conference === 'NFC' && team.division === 'SOUTH') { %>
+            <li>
+              <%= team.city %>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
